@@ -16,3 +16,8 @@ UserNotExist = {
     "is_succes": False,
     "detail": "User Not Exist"
 }
+
+WrongPassword = {
+    "is_succes": False,
+    "detail": "Password Is Incorrect"
+}
