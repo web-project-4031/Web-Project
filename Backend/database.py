@@ -33,7 +33,7 @@ def run_query(query, params=None):
             connection.close()
 
 
-def check_exist(user_name: str):
+def check_exist_user(user_name: str):
     result = run_query('select * from users where user_name = %s', (user_name,))
     return bool(result)
 
@@ -61,4 +61,10 @@ def insert_user(values: tuple):
             connection.close()
             return True
 
+
+def user_password_checker(user_name: str, password: str):
+    result = run_query("SELECT password FROM users WHERE user_name = %s", (user_name,))[0]
+    if result['password'] == password:
+        return True
+    return False
 
