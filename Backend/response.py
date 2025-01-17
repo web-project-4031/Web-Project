@@ -11,3 +11,8 @@ UnExpected = {
     "is_succes": False,
     "detail": "Unexpected error occurs"
 }
+
+UserNotExist = {
+    "is_succes": False,
+    "detail": "User Not Exist"
+}
