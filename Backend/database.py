@@ -33,4 +33,6 @@ def run_query(query, params=None):
             conn.close()
 
 
-print(run_query("select * from users"))
+def check_exist(user_name: str):
+    result = run_query('select * from users where user_name = %s', (user_name,))
+    return bool(result)
